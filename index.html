@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Background Color on Enter Key</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #container {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: white;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:focus {
+            outline: none;
+        }
+    </style>
+   <script>
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor = "lightgray";
+        }
+
+        document.addEventListener("keydown", function(event) {
+            if (event.keyCode === 13) { // Enter key
+                changeBackgroundColor();
+            }
+        });
+      
+    </script>
+</head>
+<body>
+   <div id="container">
+        <button onclick="changeBackgroundColor()">Change Background Color</button>
+   </div>
+</body>
+</html>
